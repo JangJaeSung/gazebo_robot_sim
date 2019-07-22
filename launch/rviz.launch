@@ -1,0 +1,12 @@
+<!-- rviz.launch -->
+<launch>
+  <!-- floorplan -->
+  <arg name="floorplan" default="$(find mobile_robot_sim)/worlds/sim_simple.yaml"/>
+  <arg name="remap_map" default="floorplan"/>
+  <node pkg="map_server" type="map_server" name="map_server" output="screen" args="$(arg floorplan) map:=$(arg remap_map)">  
+    <param name="frame_id" value="odom" />
+  </node>
+  
+  <!-- rviz configuration -->  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mobile_robot_sim)/launch/rviz/mobile_robot_sim.rviz"/>
+</launch>

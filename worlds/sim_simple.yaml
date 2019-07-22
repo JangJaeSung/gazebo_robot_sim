@@ -1,0 +1,6 @@
+image: sim_simple.png  # yaml이 있는 위치 기준 상대경로 입력가능함.
+resolution: 0.015923   # 5m/314px
+origin: [ -0.4, -0.45, 0.0 ] # map의 중심점 (x, y, theta (rad) )
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.19
